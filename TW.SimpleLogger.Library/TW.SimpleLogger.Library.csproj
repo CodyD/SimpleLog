@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\WriteAdapter.cs" />
+    <Compile Include="Adapters\ConsoleWriteAdapter.cs" />
+    <Compile Include="Adapters\MemoryFileWriteAdapter.cs" />
     <Compile Include="LogBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleLogger.cs" />

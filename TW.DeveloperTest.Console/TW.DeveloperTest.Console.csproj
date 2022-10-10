@@ -65,6 +65,18 @@
       <Project>{d9a0edfb-b5d1-49f9-9f61-11f146c68f0a}</Project>
       <Name>TW.DeveloperTest.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TW.SimpleLogger.Contracts\TW.SimpleLogger.Contracts.csproj">
+      <Project>{6f47c747-71a4-4e52-a8a5-07d0bb691d28}</Project>
+      <Name>TW.SimpleLogger.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TW.SimpleLogger.Library\TW.SimpleLogger.Library.csproj">
+      <Project>{7679af91-a3bf-4ebb-afb4-2ce21b2543ca}</Project>
+      <Name>TW.SimpleLogger.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TW.UnitTest.SimpleLogger\TW.UnitTest.SimpleLogger.csproj">
+      <Project>{6b62bfbb-fa01-48c7-9301-d29c2fc58f8f}</Project>
+      <Name>TW.UnitTest.SimpleLogger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

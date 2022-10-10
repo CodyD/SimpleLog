@@ -8,7 +8,7 @@ using TW.SimpleLogger.Contracts;
 
 namespace TW.SimpleLogger.Library.Adapters
 {
-   public class WriteAdapter : IWriteAdapter
+   public class MemoryFileWriteAdapter : IWriteAdapter
    {
       public MemoryMappedFile File
       {
