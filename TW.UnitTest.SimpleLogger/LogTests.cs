@@ -1,20 +1,21 @@
-using Moq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
 using System.IO.MemoryMappedFiles;
 using System.Threading.Tasks;
+using TW.SimpleLogger.Contracts.Enums;
 using TW.SimpleLogger.Library;
-using TW.SmpleLogger.Contracts;
-using TW.SmpleLogger.Contracts.Enums;
+using TW.SimpleLogger.Contracts;
+using TW.SimpleLogger.Contracts.Enums;
 using TW.UnitTest.SimpleLogger.Mock;
-using Xunit;
 
 namespace TW.UnitTest.SimpleLogger
 {
+   [TestClass]
    public class LogTests
    {
 
-      [Fact]
+      [TestMethod]
       public async Task Log_Severity_Expects_Severity_In_Output()
       {
          bool success = true;
@@ -25,14 +26,14 @@ namespace TW.UnitTest.SimpleLogger
             logger.Log(severity, Granularity.Simple, string.Empty);
             success = success && myWriter.LastWrite.Contains(severity.ToString());
          }
-         Assert.True(success);
+         Assert.IsTrue(success);
       }
 
-      [Fact]
+      [TestMethod]
       public async Task Log_Expects_Timestamp()
       {
          //need to set up a time proxy for this
-         Assert.True(false);
+         Assert.IsTrue(false);
       }
    }
 }

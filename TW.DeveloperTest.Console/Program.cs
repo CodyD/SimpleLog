@@ -11,6 +11,7 @@ namespace TW.DeveloperTest.ConsoleApp
             bool run = true;
             IWorker worker = Ioc.Resolve<IWorker>();
 
+
             do
             {
                 if (Console.KeyAvailable)
@@ -27,9 +28,6 @@ namespace TW.DeveloperTest.ConsoleApp
                 try
                 {
                     var result = worker.GetResult();
-
-                    //TODO replace with logging library
-                    Console.WriteLine($"output - {result}");
                 }
                 catch (Exception e)
                 {

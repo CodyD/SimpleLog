@@ -1,6 +1,8 @@
-﻿using System.Text;
-using TW.SmpleLogger.Contracts;
-using TW.SmpleLogger.Contracts.Enums;
+﻿using System;
+using System.Text;
+using System.Threading.Tasks;
+using TW.SimpleLogger.Contracts;
+using TW.SimpleLogger.Contracts.Enums;
 
 namespace TW.SimpleLogger.Library
 {
@@ -20,6 +22,11 @@ namespace TW.SimpleLogger.Library
          }
          string line = CreateLine(sev, gran, message);
          Writer.Write(line);
+      }
+
+      public async Task LogAsync(Severity sev, Granularity gran, string message)
+      {
+         //TODO this would be great
       }
 
       private string CreateLine(Severity sev, Granularity gran, string msg) {

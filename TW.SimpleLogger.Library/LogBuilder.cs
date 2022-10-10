@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using TW.SmpleLogger.Contracts;
+using TW.SimpleLogger.Contracts;
 
 namespace TW.SimpleLogger.Library
 {

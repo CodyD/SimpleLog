@@ -1,6 +1,6 @@
-﻿using TW.SmpleLogger.Contracts.Enums;
+﻿using TW.SimpleLogger.Contracts.Enums;
 
-namespace TW.SmpleLogger.Contracts
+namespace TW.SimpleLogger.Contracts
 {
    public interface ISimpleLogger
    {
