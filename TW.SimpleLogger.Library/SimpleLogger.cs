@@ -6,14 +6,26 @@ using TW.SimpleLogger.Contracts.Enums;
 
 namespace TW.SimpleLogger.Library
 {
+   /// <summary>
+   /// Simple concrete implementation of a logging utility.
+   /// </summary>
    public class SimpleLogger : ISimpleLogger
    {
-      public IWriteAdapter Writer
+      /// <summary>
+      /// The output interface.
+      /// </summary>
+      protected readonly IWriteAdapter _writer;
+
+      public SimpleLogger(IWriteAdapter write)
       {
-         get;
-         set;
+         if (null == write)
+         {
+            throw new ArgumentNullException(nameof(write));
+         }
+         _writer = write;
       }
 
+      /// <inheritdoc />
       public void Log(Severity sev, Granularity gran, string message)
       {
          if (null == message)
@@ -21,12 +33,22 @@ namespace TW.SimpleLogger.Library
             throw new ArgumentNullException(nameof(message));
          }
          string line = CreateLine(sev, gran, message);
-         Writer.Write(line);
+         _writer.Write(line);
       }
 
+
+      /// <summary>
+      /// Not yet implemented.
+      /// </summary>
+      /// <param name="sev"></param>
+      /// <param name="gran"></param>
+      /// <param name="message"></param>
+      /// <returns></returns>
+      /// <exception cref="NotImplementedException"></exception>
       public async Task LogAsync(Severity sev, Granularity gran, string message)
       {
          //TODO this would be great
+         throw new NotImplementedException();
       }
 
       private string CreateLine(Severity sev, Granularity gran, string msg) {

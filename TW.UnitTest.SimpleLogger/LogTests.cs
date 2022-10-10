@@ -14,6 +14,8 @@ namespace TW.UnitTest.SimpleLogger
    [TestClass]
    public class LogTests
    {
+      //TODO so  many tests, so little time...
+
 
       [TestMethod]
       public async Task Log_Severity_Expects_Severity_In_Output()
