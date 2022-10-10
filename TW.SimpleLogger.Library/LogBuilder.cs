@@ -32,8 +32,7 @@ namespace TW.SimpleLogger.Library
       /// <returns>A new instance of the <see cref="SimpleLogger"/> class</returns>
       public ISimpleLogger Build()
       {
-         var logger = new SimpleLogger();
-         logger.Writer = _writer;
+         var logger = new SimpleLogger(_writer);
          return logger;
       }
    }
